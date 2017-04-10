@@ -19,20 +19,6 @@ def physics_no_chemistry
     FROM
       nobels
     WHERE
-      yr IN (
-        SELECT
-          yr
-        FROM
-          nobels
-        WHERE
-          subject = 'Physics'
-      ) AND NOT IN (
-        SELECT
-          yr
-        FROM
-          nobels
-        WHERE
-          subject = 'Chemistry'
-      )
+      yr
   SQL
 end
